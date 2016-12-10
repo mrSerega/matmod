@@ -1,10 +1,11 @@
 #include <vector>
+#include <QDebug>
 
 #ifndef CALCULATIONG_H
 #define CALCULATIONG_H
 
 
-class calculating
+class calc
 {
 private:
 	int tSize;//количетсво дискретных значений t
@@ -25,11 +26,25 @@ private:
 	double _f(int n, int m);
 	double _fi(int n,int m);
 public:
-	calculating(std::vector<double> t_vector, std::vector<double> x_vector):
+	calc(std::vector<double> t_vector, std::vector<double> x_vector):
 		__t{t_vector},
 		__x{x_vector},
 		tSize{t_vector.size()},
-		xSize{x_vector.size()}{}
+		xSize{x_vector.size()}
+	{
+		__y.resize(xSize);
+		//qDebug("ok");
+		for(int x=0;x<xSize;++x){
+			__y[x].resize(tSize);
+		}
+		for(int x = 1;x<xSize;++x){
+			for(int t = 1;t<tSize;++t){
+				//qDebug("ok");
+				__y[x][t]=_f(x,t);
+			}
+		}
+	}
+	std::vector<std::vector<double> > getVec();
 };
 
 #endif // CALCULATIONG_H
