@@ -1,0 +1,1 @@
+ConsoleApplication3 - это Рунге-Кутты и Эйлер
