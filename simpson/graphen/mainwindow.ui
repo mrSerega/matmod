@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>484</width>
-    <height>264</height>
+    <width>544</width>
+    <height>270</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -193,13 +193,36 @@ p, li { white-space: pre-wrap; }
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
+   <widget class="QSlider" name="numslider">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>50</y>
+      <width>22</width>
+      <height>160</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="num">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>10</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>484</width>
+     <width>544</width>
      <height>21</height>
     </rect>
    </property>

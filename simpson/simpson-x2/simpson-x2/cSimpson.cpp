@@ -55,6 +55,8 @@ std::vector<std::vector<double> > cSimpson::apr(unsigned int n)
         vec.push_back((*gauss)());
         vec.back().push_back(x2i2);
         vec.back().push_back(x2i);
+		delete gauss;
+		gauss = nullptr;
     }
     return vec;
 }

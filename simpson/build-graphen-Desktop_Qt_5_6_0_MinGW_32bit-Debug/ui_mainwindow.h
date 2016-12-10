@@ -20,6 +20,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSlider>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
@@ -44,6 +45,8 @@ public:
     QTextEdit *answer;
     QLabel *label_5;
     QSlider *verticalSlider;
+    QSlider *numslider;
+    QTextBrowser *num;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -52,7 +55,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(484, 264);
+        MainWindow->resize(544, 270);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         widget = new QCustomPlot(centralWidget);
@@ -95,10 +98,17 @@ public:
         verticalSlider->setObjectName(QStringLiteral("verticalSlider"));
         verticalSlider->setGeometry(QRect(462, 0, 20, 211));
         verticalSlider->setOrientation(Qt::Vertical);
+        numslider = new QSlider(centralWidget);
+        numslider->setObjectName(QStringLiteral("numslider"));
+        numslider->setGeometry(QRect(500, 50, 22, 160));
+        numslider->setOrientation(Qt::Vertical);
+        num = new QTextBrowser(centralWidget);
+        num->setObjectName(QStringLiteral("num"));
+        num->setGeometry(QRect(480, 10, 51, 31));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 484, 21));
+        menuBar->setGeometry(QRect(0, 0, 544, 21));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
